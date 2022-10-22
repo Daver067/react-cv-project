@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
+import Education from "./Components/Education";
+import GeneralInfo from "./Components/GeneralInfo";
+import Practical from "./Components/Practical";
 
 class App extends Component {
   constructor(props) {
@@ -8,7 +11,18 @@ class App extends Component {
   }
 
   render() {
-    return <h1>test</h1>;
+    return (
+      <div>
+        <form>
+          <fieldset>
+            <legend>Resume Builder</legend>
+            <GeneralInfo />
+            <Education />
+            <Practical />
+          </fieldset>
+        </form>
+      </div>
+    );
   }
 }
 
