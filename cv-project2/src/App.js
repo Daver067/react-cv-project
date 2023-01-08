@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Education from "./Components/Education";
+import GeneralInfo from "./Components/GeneralInfo";
+import Practical from "./Components/Practical";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div>
+        <form>
+          <fieldset>
+            <legend>Resume Builder</legend>
+            <GeneralInfo />
+            <Education />
+            <Practical />
+          </fieldset>
+        </form>
+      </div>
+    );
+  }
 }
 
 export default App;
